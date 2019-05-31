@@ -1,0 +1,37 @@
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: #bada55; /* green */
+    /* transition needs to be here if we want it to work both ways (when hovering and unhovering */
+    transition-property: width, background-color, height; /* transitions can be applied to multiple properties at once, but they must be separated with a comma to work */
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.box:hover {
+    width: 150px;
+    height: 150px;
+    background-color: #e84610; /* red */
+}
+
+.box2 {
+    width: 50px;
+    height: 50px;
+    background-color: #bada55;
+    transition: background-color 1s ease-in-out 1s; /* the time at the end means a delay to the transition - 1s delay in this instance */
+}
+
+.box2:hover {
+    background-color: #e84610;
+}
+
+a {
+    color: #e84610;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 1s ease-in-out; /* shorthand */
+}
+
+a:hover {
+    color: #000;
+}

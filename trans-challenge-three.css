@@ -1,0 +1,11 @@
+.element {
+    height: 100px;
+    width: 100px;
+    margin: 100px;
+    background-color: #bada55;
+    transition: transform 1s linear;
+}
+
+.element:hover {
+    transform: translate(100%, 0%) scale(2) rotate(360deg); /* can set multiple transform properties at once, separated by a space */
+}

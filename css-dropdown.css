@@ -1,0 +1,61 @@
+.navDefault {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #4a4a4f;
+}
+
+button {
+    border: none;
+    background-color: #0997d3;
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    text-transform: uppercase; /* changes text within the button to uppercase */
+    cursor: pointer; /* changes the mouse style when hovering over the button */
+}
+
+.dropdownMenu {
+    list-style: none; /* removes bullet points */
+    margin: 0; /* ensures no space between top and bottom of each list item */
+    position: absolute; /* removes the grey background being applied to the menu, as this makes it independent from its parent nav element */
+    left: 0;
+    right: 0;
+    top: 50px;
+    padding: 0; /* clears out any default padding for the whole menu */
+    text-align: center;
+    width: 150px; /* shares width of the button */
+    box-shadow: 5px 5px 10px 5px rgba(74,74,79,1); /* code from cssmatic.com */
+    transform: translateY(-100%); /* this sets the menu off the screen by default */
+    transition: transform .5s ease-in-out; /* allows the menu to ease down and back up when hovering on and hovering up */
+    z-index: -1; /*z-index affects elements stacked on top of eachother and controls how they are displayed (elements with a higher z-index displayed 1st) */
+    /* setting z-index to -1 gives it a lower value than the button, so in effect, it hides it under the button */
+}
+
+.dropdownLink {
+    text-decoration: none; /* removes underline on the links */
+    display: block; /* ensures that the padding is applied correctly so that the links don't overlap eachother */
+    background-color: #f9f9f9;
+    color: #4a4a4f;
+    padding: 10px 5px;
+    transition:  background-color .5s ease-in-out, color .5s ease-in-out; /* ensures a slight delay with the colour inverting when hovering over the list items */
+}
+
+.dropdownLink:hover {
+    color: #fff;
+    background-color: #a0a0a3;
+}
+
+.dropdown {
+    width: 150px;
+    position: relative; /* so it will be relative to the fixed position of the button itself */
+}
+
+.dropdown:hover button /* this targets the button, as when we hover over the dropdown, the button will get slightly darker and remain that way */ {
+    background-color: #018ec5;
+}
+
+.dropdown:hover .dropdownMenu /* targets the dropdown menu when hovering over the dropdown */ {
+    transform: translateY(0%);
+}
